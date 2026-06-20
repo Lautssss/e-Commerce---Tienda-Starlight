@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TIENDA STARLIGHT — Tienda de fantasía</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== FACTION SELECT SCREEN ===== -->
+<div id="select-screen">
+  <div class="side dark" data-faction="dark">
+    <div class="side-content">
+      <div class="side-eyebrow">Imperio · Sith · Cazarrecompensas</div>
+      <h1 class="side-title">Lado<br>Oscuro</h1>
+      <p class="side-sub">El poder no se pide. Se toma.</p>
+    </div>
+  </div>
+  <div class="saber-line"></div>
+  <div class="side light" data-faction="light">
+    <div class="side-content">
+      <div class="side-eyebrow">Jedi · Rebelión · República</div>
+      <h1 class="side-title">Lado<br>Luminoso</h1>
+      <p class="side-sub">La paz se defiende, no se impone.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MAIN APP ===== -->
+<div id="app">
+  <header>
+    <div class="brand">TIENDA <span>STARLIGHT</span></div>
+    <div class="faction-toggle">
+      <button id="toggle-dark" data-faction="dark">Lado Oscuro</button>
+      <button id="toggle-light" data-faction="light">Lado Luminoso</button>
+    </div>
+    <button id="cart-btn">
+      🛒 Carrito <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <h2 class="page-title"><span id="title-side-text">Lado Oscuro</span></h2>
+    <p class="page-sub" id="page-sub-text">Equipamiento del Imperio, los Sith y los cazarrecompensas más temidos de la galaxia.</p>
+
+    <div class="filters" id="filters"></div>
+
+    <div class="grid" id="product-grid"></div>
+  </main>
+
+  <footer>
+    TIENDA STARLIGHT — Actividad Formativa N.º 2 · AyED · Proyecto educativo, productos ficticios
+  </footer>
+</div>
+
+<!-- ===== CART DRAWER ===== -->
+<div id="cart-overlay"></div>
+<div id="cart-drawer">
+  <div class="cart-header">
+    <h3>Tu carrito</h3>
+    <button id="close-cart">✕</button>
+  </div>
+  <div id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="cart-total-amount">₡ 0.00</strong>
+    </div>
+    <button class="checkout-btn">Finalizar compra</button>
+  </div>
+</div>
+
+<!-- ===== PRODUCT DETAIL MODAL ===== -->
+<div id="detail-overlay">
+  <div id="detail-modal">
+    <button id="detail-close">✕</button>
+    <div id="detail-image"><img id="detail-img-tag" src="" alt=""></div>
+    <div id="detail-body">
+      <div id="detail-cat"></div>
+      <div id="detail-name"></div>
+      <div id="detail-faction"></div>
+      <div id="detail-code"></div>
+      <p id="detail-desc"></p>
+      <div id="detail-meta">
+        <div id="detail-price"></div>
+        <div id="detail-stock"></div>
+      </div>
+      <button id="detail-add-btn">Agregar al carrito</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CHECKOUT ERROR MODAL ===== -->
+<div id="checkout-overlay">
+  <div id="checkout-modal">
+    <h3>Envío no disponible</h3>
+    <p>Usted vive en una galaxia muy, muy lejana. No contamos con envío a su sistema.</p>
+    <button id="close-checkout">Entendido</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
